@@ -2,18 +2,20 @@ import { Injectable } from '@angular/core';
 
 /* providedIn: 'root' --> Hace que este servicio este disponible en todos lados donde se inyecte sin export/importar */
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GifsService {
   private _tagsHistory: string[] = [];
 
-  constructor() { }
+  constructor() {}
 
   get tagsHistory() {
-    return { ...this._tagsHistory };
+    return [...this._tagsHistory];
   }
 
   searchTag(tag: string): void {
+    console.log({ tag });
+
     this._tagsHistory.unshift(tag);
   }
 }
