@@ -5,17 +5,13 @@ import { HomePageComponent } from './pages/home/home-page.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 
-
-
 @NgModule({
   declarations: [
     HomePageComponent,
     SearchBoxComponent,
-    CardListComponent
+    CardListComponent,
   ],
-  imports: [
-    CommonModule
-  ],
+  imports: [CommonModule],
   exports: [HomePageComponent, SearchBoxComponent],
 })
-export class GifsModule { }
+export class GifsModule {}
